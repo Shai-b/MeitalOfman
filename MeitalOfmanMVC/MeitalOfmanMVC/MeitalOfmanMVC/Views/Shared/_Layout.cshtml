@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="~/Content/PageStyleSheet.css" />
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css" />
+
+</head>
+
+<body>
+    <div class="page-header top">
+        <div id="loginSection">
+            @Html.Partial("_LoginPartial")
+        </div>
+        <div id="socialContainer" class="container-fluid">
+            <a class="socialButton" href="https://www.facebook.com/Meital-Ofman-Make-up-Artist-470585333137261/" target="_blank">
+                <i class="fa fa-facebook fa-lg"></i>
+            </a>
+            <a class="socialButton" href="https://www.instagram.com/meital_ofman_makeup_artist/?hl=en" target="_blank">
+                <i class="fa fa-instagram fa-lg"></i>
+            </a>
+            <a class="socialButton">
+                <i class="fa fa-youtube fa-lg"></i>
+            </a>
+        </div>
+    </div>
+    <div class="alignToCenter">
+        <img id="centerImg" src="~/Img/Capture.png" />
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid noPadding">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        @Html.ActionLink("בית", "Index", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("גלריות", "Index", "Gallries")
+                    </li>
+                    <li>
+                        <a href="#">טיפים</a>
+                    </li>
+                    <li>
+                        <a href="#">צרי קשר</a>
+                    </li>
+                </ul>
+
+                <div class="brandLogo">
+                    <a href="/">
+                        <img class="brandLogo" alt="OM" src="~/Img/Logo_small.png">
+
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>*@
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+
+    </div>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

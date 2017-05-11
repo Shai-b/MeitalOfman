@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MeitalOfmanMVC.ContentDataModels.Post>
+
+@{
+    ViewBag.Title = "Create New Post";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@Html.Partial("PostsTable", Model)

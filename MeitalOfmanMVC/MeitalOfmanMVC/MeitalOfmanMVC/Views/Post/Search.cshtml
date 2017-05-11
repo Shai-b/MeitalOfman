@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MeitalOfmanMVC.ContentDataModels.Post>
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Search</h2>
+
+@*@using (Ajax.BeginForm("Search", "Post",
+        new AjaxOptions {
+            HttpMethod ="get",
+            InsertionMode =InsertionMode.Replace,
+            UpdateTargetId = "postsTable1" }, new {@class = "form-inline" }))
+{
+    <input type="search" class="form-control mb-2 mr-sm-2 mb-sm-0" name="searchTerm" />
+    <input type="submit" class="btn btn-primary" value="Search" />
+}
+*@
+
+<form action="@Url.Action("Search")" method="get" data-mo-ajax="true" data-mo-target="postsTable1">
+    <input type="search" class="form-control mb-2 mr-sm-2 mb-sm-0" name="searchTerm" />
+    <input type="submit" class="btn btn-primary" value="Search"/>
+</form>
+@Html.Partial("PostsTable", Model)
+

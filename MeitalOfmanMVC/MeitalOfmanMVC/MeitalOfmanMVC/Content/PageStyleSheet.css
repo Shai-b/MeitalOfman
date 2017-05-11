@@ -1,0 +1,162 @@
+﻿:root {
+    --main-color: #ECC5C0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.body-content {
+    padding: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+i {
+    color: white;
+}
+
+.page-header {
+    background-color: var(--main-color);
+    height: 50px;
+    margin-top: 0;
+}
+
+.socialButton {
+    padding-left: 12px;
+}
+
+div.alignToCenter {
+    margin: 0 auto;
+    width: 700px;
+}
+
+#centerImg {
+    max-width: 100%;
+    min-width: 100%;
+    margin-left: 7%;
+}
+
+#socialContainer {
+    position: absolute;
+    top: 14px;
+    right: 24%;
+}
+
+#loginSection {
+    position: absolute;
+    top: 14px;
+    left: 24%;
+}
+
+#loginSection a {
+    color:white;
+    padding-right:1em;
+}
+
+
+.navbar .navbar-collapse {
+    text-align: center;
+    font-size: 1.3em;
+    background-color: white;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.nav.navbar-nav>li {
+    float: right;   
+}
+
+div.brandLogo {
+    display: inline-flex;
+    padding-left: 4%;
+}
+
+img.brandLogo {
+    padding-top:5%;
+}
+
+ul.nav.navbar-nav>li>a {
+  padding: 15px 30px;
+}
+
+.noPadding {
+    padding: 0px;
+}
+
+.fitImgToDiv{
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+
+.row.col-md-offset-3 {
+
+    max-width:50%; 
+    vertical-align:middle;
+    margin-bottom: 5%;
+}
+
+footer {
+    background-color: var(--main-color);
+    height: 300px;
+
+}
+
+
+.moButton {
+    background-color:var(--main-color);
+    color: white;
+}
+
+.fb-like {
+    padding-top :7%;
+}
+
+.box {
+    position:relative;
+    padding-bottom: 2em;
+    padding-left: 2em;
+    padding-top: 2em;
+    padding-right: 2em;
+    margin: 1em;
+
+    background-color:white;
+    box-shadow:none;
+    
+    border-color: #ddd;
+    border-width: 1px;
+    border-style:solid;
+    border-radius: 5px;
+}
+
+.tollbarBox {
+    padding-bottom: 4em;
+}
+
+.btnTollbar {
+    position:absolute;
+    bottom:1em;
+    left: 1em;
+}
+
+.aboutMeNotScrolled {
+    position:absolute;
+
+}
+
+.aboutMeScrolled {
+    position: fixed;
+    /*margin-left: 60%;*/
+    width: 14%;
+    margin-top: -13em;
+}
